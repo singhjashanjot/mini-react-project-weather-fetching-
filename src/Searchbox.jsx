@@ -15,13 +15,13 @@ export default function Searchbox({ updateinfo }) {
         try {
             let response = await fetch(`${api}?q=${city}&appid=${key}&units=metric`);
             let jsonres = await response.json();
-            // console.log(jsonres)
+            console.log(jsonres)
             let result = {
                 city: city,
                 temp: jsonres.main.temp,
                 humidity: jsonres.main.humidity,
-                tempmin: jsonres.main.temp_min,
-                tempmax: jsonres.main.temp_max,
+                temp_min: jsonres.main.temp_min,
+                temp_max: jsonres.main.temp_max,
                 feelslike: jsonres.main.feels_like,
                 description: jsonres.weather[0].description
             }

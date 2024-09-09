@@ -9,19 +9,18 @@ export default function WeatherApp() {
         feelslike: 25.5,
         humidity: 80,
         temp: 10,
-        tempMin: 1013,
-        tempMax: "06:00",
+        temp_min: 13,
+        temp_max: 10,
         description: "clear sky",
 
     })
-    let updateinfo=(newinfo)=>{
+    let updateinfo = (newinfo) => {
         setweatherinfo(newinfo)
     }
     return (
         <div style={{ textAlign: "center" }}>
-            <Searchbox updateinfo={updateinfo}/>
+            <Searchbox updateinfo={updateinfo} />
             <Infobox info={weatherinfo} />
-
         </div>
     )
 
